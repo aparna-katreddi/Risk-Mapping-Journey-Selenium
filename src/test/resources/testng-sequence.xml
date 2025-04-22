@@ -1,0 +1,21 @@
+<!-- <suite name="SequentialSuite" parallel="false">
+    <test name="ChromeTestSequential">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.ai.holistic.tests.GoogleSearchTest"/>
+        </classes>
+    </test>
+</suite>
+-->
+
+<suite name="SequentialSuite" parallel="true">
+<test name="ChromeTestSequential">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+        <class name="com.ai.holistic.tests.GeneralInfoDummyTests"/>
+        <class name="com.ai.holistic.tests.AIRiskManagementPageTest"/>
+        <class name="com.ai.holistic.tests.GeneralInfoInvalidMessageTest"/>
+        <class name="com.ai.holistic.tests.AIRiskManagementPageDummyTest"/>
+    </classes>
+</test>
+</suite>
