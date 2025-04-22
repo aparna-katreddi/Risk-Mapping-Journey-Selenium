@@ -3,13 +3,7 @@ name: Manual Test & Report Publish
 on:
   workflow_dispatch:
     inputs:
-      branch:
-        description: 'Select the branch to run tests from'
-        required: true
-        type: choice
-        default: 'main'
-        options: []  # Initially empty, will be dynamically populated
-
+      
       testng_file:
         description: 'TestNG Suite File'
         required: true
@@ -21,11 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code from the selected branch
-      - name: Checkout selected branch
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.inputs.branch }}
+     
 
       # Set up Java (AdoptOpenJDK or any other distribution)
       - name: Set up Java
@@ -34,23 +24,6 @@ jobs:
           distribution: 'temurin'  # or 'zulu', 'adopt', etc.
           java-version: '17'  # Adjust as needed
 
-      # Get list of branches dynamically using GitHub API
-      - name: Get list of branches
-        id: get-branches
-        run: |
-          branches=$(curl -s https://api.github.com/repos/${{ github.repository }}/branches | jq -r '.[].name')
-          echo "branches=$branches" >> $GITHUB_ENV
-
-      # Dynamically set branch options based on the available branches
-      - name: Set dynamic branch options
-        run: |
-          echo "Available branches: ${{ env.branches }}"
-          echo "::set-output name=branches::${{ env.branches }}"
-
-      # Set dynamic options for the `branch` input
-      - name: Set dynamic input options
-        run: |
-          echo "::set-output name=branch-options::${{ env.branches }}"
 
       # Cache Maven dependencies to speed up builds
       - name: Cache Maven dependencies
@@ -65,8 +38,8 @@ jobs:
       - name: Run Tests & Generate Report
         run: |
           mkdir -p reports
-          mvn clean install -DsuiteXmlFile=${{ github.event.inputs.testng_file }}
-          echo "<html><body><h1>Report for ${{ github.event.inputs.branch }}</h1></body></html>" > reports/index.html
+          echo "📦 Running TestNG Suite: ${{ github.event.inputs.testng_file }}"
+          mvn clean test -DsuiteXmlFile=src/test/resources/${{ github.event.inputs.testng_file }}
 
       # Upload the generated report to GitHub Pages
       - name: Upload to GitHub Pages
