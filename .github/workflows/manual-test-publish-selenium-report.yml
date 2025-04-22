@@ -1,0 +1,43 @@
+name: Manual Test & Report Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Select the branch to run tests from'
+        required: true
+        default: 'main'
+        type: choice
+        options:
+          - main
+          - dev
+          - feature-x
+
+jobs:
+  test-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout selected branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: Set up Java (or your runtime)
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'  # Adjust as needed
+
+      - name: Run Tests & Generate Report
+        run: |
+          mkdir -p reports
+          echo "<html><body><h1>Report for ${{ github.event.inputs.branch }}</h1></body></html>" > reports/index.html
+          # Replace with your test/report commands
+
+      - name: Upload to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports
+          destination_dir: ${{ github.event.inputs.branch }}-${{ github.run_number }}
+          keep_files: true
