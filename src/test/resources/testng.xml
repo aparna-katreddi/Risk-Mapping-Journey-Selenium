@@ -1,0 +1,9 @@
+<!-- <suite name="ParallelSuite" parallel="tests" thread-count="1"> -->
+<suite name="ParallelSuite" parallel="tests" thread-count="1">
+    <test name="ChromeTests">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.ai.holistic.tests.GoogleSearchTest" />
+        </classes>
+    </test>
+</suite>
