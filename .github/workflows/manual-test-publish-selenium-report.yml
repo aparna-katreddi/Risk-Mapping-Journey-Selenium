@@ -3,11 +3,10 @@ name: Manual Test & Report Publish
 on:
   workflow_dispatch:
     inputs:
-      
       testng_file:
-        description: 'TestNG Suite File'
+        description: 'TestNG Suite File (relative to src/test/resources)'
         required: true
-        default: 'testng.xml'  # Default testng file, can be overridden manually
+        default: 'testng.xml'
         type: string
 
 jobs:
@@ -15,17 +14,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     
+      - name: Checkout current branch
+        uses: actions/checkout@v3
 
-      # Set up Java (AdoptOpenJDK or any other distribution)
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'  # or 'zulu', 'adopt', etc.
-          java-version: '17'  # Adjust as needed
+          distribution: 'temurin'
+          java-version: '17'
 
-
-      # Cache Maven dependencies to speed up builds
       - name: Cache Maven dependencies
         uses: actions/cache@v4
         with:
@@ -35,21 +32,19 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Run Maven Tests with TestNG Suite
-        working-directory: Risk-Mapping-Journey-Selenium
         run: |
-                echo "📦 Running TestNG Suite: ${{ github.event.inputs.testng_file }}"
-                mvn clean test -DsuiteXmlFile=src/test/resources/${{ github.event.inputs.testng_file }}
-      
+          echo "📦 Running TestNG Suite: ${{ github.event.inputs.testng_file }}"
+          mvn clean test -DsuiteXmlFile=src/test/resources/${{ github.event.inputs.testng_file }}
+
       - name: Prepare HTML report
-        working-directory: Risk-Mapping-Journey-Selenium
         run: |
-                mkdir -p reports
-                cp -r target/surefire-reports/* reports/ || echo "No reports found"
-      
-      - name: Upload to GitHub Pages
+          mkdir -p reports
+          cp -r target/surefire-reports/* reports/ || echo "No reports found"
+
+      - name: Upload report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-                github_token: ${{ secrets.GITHUB_TOKEN }}
-                publish_dir: ./reports
-                destination_dir: ${{ github.event.inputs.branch }}-${{ github.run_number }}
-                keep_files: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports
+          destination_dir: ${{ github.ref_name }}-${{ github.run_number }}
+          keep_files: true
