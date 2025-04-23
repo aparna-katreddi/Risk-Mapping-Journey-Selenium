@@ -35,11 +35,13 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Run Maven Tests with TestNG Suite
+        working-directory: Risk-Mapping-Journey-Selenium
         run: |
                 echo "📦 Running TestNG Suite: ${{ github.event.inputs.testng_file }}"
                 mvn clean test -DsuiteXmlFile=src/test/resources/${{ github.event.inputs.testng_file }}
       
       - name: Prepare HTML report
+        working-directory: Risk-Mapping-Journey-Selenium
         run: |
                 mkdir -p reports
                 cp -r target/surefire-reports/* reports/ || echo "No reports found"
