@@ -34,18 +34,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      # Run Maven Tests and Generate the Report
-      - name: Run Tests & Generate Report
+      - name: Run Maven Tests with TestNG Suite
         run: |
-          mkdir -p reports
-          echo "📦 Running TestNG Suite: ${{ github.event.inputs.testng_file }}"
-          mvn clean test -DsuiteXmlFile=src/test/resources/${{ github.event.inputs.testng_file }}
-
-      # Upload the generated report to GitHub Pages
+                echo "📦 Running TestNG Suite: ${{ github.event.inputs.testng_file }}"
+                mvn clean test -DsuiteXmlFile=src/test/resources/${{ github.event.inputs.testng_file }}
+      
+      - name: Prepare HTML report
+        run: |
+                mkdir -p reports
+                cp -r target/surefire-reports/* reports/ || echo "No reports found"
+      
       - name: Upload to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./reports
-          destination_dir: ${{ github.event.inputs.branch }}-${{ github.run_number }}
-          keep_files: true
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: ./reports
+                destination_dir: ${{ github.event.inputs.branch }}-${{ github.run_number }}
+                keep_files: true
