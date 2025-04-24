@@ -68,8 +68,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-    
-
       # Step 5: Run tests with parameters passed by the user
       - name: Run Selenium tests
         run: mvn clean test -Dbrowser=${{ github.event.inputs.browser }} -Denv=${{ github.event.inputs.env }} -Dgroups=${{ github.event.inputs.groups }} -Dtestng.suite=src/test/resources/${{ github.event.inputs.suite }}
@@ -81,40 +79,40 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-results
-          path: target/surefire-reports/
+          path: /reports/
 
-      - name: Set up Git user for commit
-        run: |
-            git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-            git config --global user.name "${{ github.actor }}"
-
-      - name: Create or switch to gh-pages branch
+      # Step 7: upload to GitHub Pages 
+      - name: Upload all reports to gh-pages and update index
+        if: always()
         run: |
               git fetch
-              git checkout gh-pages || git checkout --orphan gh-pages
-              git reset --hard
-              git rm -rf . || true       
-
-      # Step 7: Deploy to GitHub Pages (publish to gh-pages branch)
-      - name: Deploy to GitHub Pages
-        if: success()  # Only deploy if tests pass
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/surefire-reports  # The directory to publish
-          user_name: 'GitHub Actions'
-          user_email: 'github-actions@github.com'
-
-      # Step 8: Upload Extent Report (or any other reports you have)
-      - name: Upload Extent Reports to GitHub Pages
-        if: success()
-        run: |
-          # Move your Extent report (or generated HTML files) to the gh-pages directory
-          mv ./reports ./gh-pages/
+              git switch gh-pages || git checkout --orphan gh-pages
           
-          # Create an empty commit if no changes have been made
-          git add .
-          git commit -m "Update test results" || echo "No changes to commit"
+              mkdir -p reports
           
-          # Push the changes to the gh-pages branch
-          git push origin gh-pages
+              # Keep all old reports
+              cp -r reports/ temp-reports || true
+          
+              # Copy new reports
+              cp /reports/*.html reports/
+          
+              # Generate index.html with all reports
+              INDEX_FILE="reports/index.html"
+              echo "<!DOCTYPE html><html><head><title>Test Reports</title></head><body>" > $INDEX_FILE
+              echo "<h1>Selenium Test Reports</h1><ul>" >> $INDEX_FILE
+          
+              for file in $(ls reports/*.html | sort -r); do
+                filename=$(basename "$file")
+                echo "<li><a href=\"$filename\">$filename</a></li>" >> $INDEX_FILE
+              done
+          
+              echo "</ul></body></html>" >> $INDEX_FILE
+          
+              git config user.name "github-actions"
+              git config user.email "github-actions@github.com"
+          
+              git add reports
+              git commit -m "Add test report and update index for run ${{ github.run_id }}" || echo "No changes to commit"
+              git push origin gh-pages      
+
+
