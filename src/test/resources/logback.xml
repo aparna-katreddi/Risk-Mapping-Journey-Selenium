@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Suppress wire logs -->
+    <logger name="org.apache.hc.client5.http.wire" level="OFF" />
+
+    <!-- Optional: Suppress other noisy libs -->
+    <logger name="org.apache.http" level="WARN" />
+    <logger name="org.openqa.selenium" level="INFO" />
+
+    <!-- Root logger -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Console output appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+</configuration>
