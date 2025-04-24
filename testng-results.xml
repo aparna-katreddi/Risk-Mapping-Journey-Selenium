@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="10" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-24T16:29:32 UTC" name="AI_RISK_JOURNEY_E2E_TEST_SUITE" finished-at="2025-04-24T16:30:02 UTC" duration-ms="30719">
+    <groups>
+      <group name="regression">
+        <method signature="AIRiskManagementPageTest.dummyVerifyTitleOnAIRiskMngmtPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" name="dummyVerifyTitleOnAIRiskMngmtPage" class="com.ai.holistic.tests.AIRiskManagementPageTest"/>
+        <method signature="AIRiskManagementPageTest.verifyRiskMappingJourneyE2eFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" name="verifyRiskMappingJourneyE2eFlow" class="com.ai.holistic.tests.AIRiskManagementPageTest"/>
+        <method signature="GeneralInfoInvalidMessageTest.validateGeneralInfoPageMissingDataErrorMessages(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.GeneralInfoInvalidMessageTest@51891008]" name="validateGeneralInfoPageMissingDataErrorMessages" class="com.ai.holistic.tests.GeneralInfoInvalidMessageTest"/>
+      </group> <!-- regression -->
+    </groups>
+    <test started-at="2025-04-24T16:29:32 UTC" name="AI RISK MANAGEMENT TESTS" finished-at="2025-04-24T16:30:02 UTC" duration-ms="30719">
+      <class name="com.ai.holistic.tests.AIRiskManagementPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:32 UTC" name="setUp" finished-at="2025-04-24T16:29:54 UTC" duration-ms="22169" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.ai.holistic.tests.AIRiskManagementPageTest.dummyVerifyTitleOnAIRiskMngmtPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@4e70a728]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dummyVerifyTitleOnAIRiskMngmtPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:54 UTC" name="dummyVerifyTitleOnAIRiskMngmtPage" data-provider="getAllRegionValidData" finished-at="2025-04-24T16:29:56 UTC" duration-ms="1623" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RegionUS RiskHigh SensitiveYes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Organization A]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user2@example.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[US]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[High]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Encryption]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dummyVerifyTitleOnAIRiskMngmtPage -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:56 UTC" name="tearDown" finished-at="2025-04-24T16:29:56 UTC" duration-ms="437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=dummyVerifyTitleOnAIRiskMngmtPage status=SUCCESS method=AIRiskManagementPageTest.dummyVerifyTitleOnAIRiskMngmtPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:56 UTC" name="setUp" finished-at="2025-04-24T16:29:57 UTC" duration-ms="428" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.ai.holistic.tests.AIRiskManagementPageTest.dummyVerifyTitleOnAIRiskMngmtPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@b7838a9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dummyVerifyTitleOnAIRiskMngmtPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:57 UTC" name="dummyVerifyTitleOnAIRiskMngmtPage" data-provider="getAllRegionValidData" finished-at="2025-04-24T16:29:57 UTC" duration-ms="413" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RegionUS RiskHigh SensitiveYes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Organization A]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user2@example.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[EU]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[High]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Encryption]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dummyVerifyTitleOnAIRiskMngmtPage -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:57 UTC" name="tearDown" finished-at="2025-04-24T16:29:57 UTC" duration-ms="130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=dummyVerifyTitleOnAIRiskMngmtPage status=SUCCESS method=AIRiskManagementPageTest.dummyVerifyTitleOnAIRiskMngmtPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:57 UTC" name="setUp" finished-at="2025-04-24T16:29:58 UTC" duration-ms="298" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.ai.holistic.tests.AIRiskManagementPageTest.dummyVerifyTitleOnAIRiskMngmtPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@696f0212]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dummyVerifyTitleOnAIRiskMngmtPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:58 UTC" name="dummyVerifyTitleOnAIRiskMngmtPage" data-provider="getAllRegionValidData" finished-at="2025-04-24T16:29:58 UTC" duration-ms="392" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RegionUS RiskHigh SensitiveYes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Organization A]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user2@example.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[APAC]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[High]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Encryption]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dummyVerifyTitleOnAIRiskMngmtPage -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:58 UTC" name="tearDown" finished-at="2025-04-24T16:29:58 UTC" duration-ms="78" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=dummyVerifyTitleOnAIRiskMngmtPage status=SUCCESS method=AIRiskManagementPageTest.dummyVerifyTitleOnAIRiskMngmtPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:58 UTC" name="setUp" finished-at="2025-04-24T16:29:59 UTC" duration-ms="328" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.ai.holistic.tests.AIRiskManagementPageTest.verifyRiskMappingJourneyE2eFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5733f295]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRiskMappingJourneyE2eFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:29:59 UTC" name="verifyRiskMappingJourneyE2eFlow" data-provider="getAllRegionValidData" finished-at="2025-04-24T16:30:00 UTC" duration-ms="968" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RegionUS RiskHigh SensitiveYes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Organization A]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user2@example.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[US]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[High]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Encryption]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRiskMappingJourneyE2eFlow -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:30:00 UTC" name="tearDown" finished-at="2025-04-24T16:30:00 UTC" duration-ms="128" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyRiskMappingJourneyE2eFlow status=SUCCESS method=AIRiskManagementPageTest.verifyRiskMappingJourneyE2eFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:30:00 UTC" name="setUp" finished-at="2025-04-24T16:30:00 UTC" duration-ms="302" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.ai.holistic.tests.AIRiskManagementPageTest.verifyRiskMappingJourneyE2eFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@1c3146bc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRiskMappingJourneyE2eFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:30:00 UTC" name="verifyRiskMappingJourneyE2eFlow" data-provider="getAllRegionValidData" finished-at="2025-04-24T16:30:01 UTC" duration-ms="988" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RegionUS RiskHigh SensitiveYes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Organization A]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user2@example.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[EU]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[High]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Encryption]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRiskMappingJourneyE2eFlow -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:30:01 UTC" name="tearDown" finished-at="2025-04-24T16:30:01 UTC" duration-ms="129" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyRiskMappingJourneyE2eFlow status=SUCCESS method=AIRiskManagementPageTest.verifyRiskMappingJourneyE2eFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:30:01 UTC" name="setUp" finished-at="2025-04-24T16:30:01 UTC" duration-ms="311" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.ai.holistic.tests.AIRiskManagementPageTest.verifyRiskMappingJourneyE2eFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@56c698e3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRiskMappingJourneyE2eFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:30:01 UTC" name="verifyRiskMappingJourneyE2eFlow" data-provider="getAllRegionValidData" finished-at="2025-04-24T16:30:02 UTC" duration-ms="944" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RegionUS RiskHigh SensitiveYes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Organization A]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user2@example.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[APAC]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[High]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Encryption]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRiskMappingJourneyE2eFlow -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a]" started-at="2025-04-24T16:30:02 UTC" name="tearDown" finished-at="2025-04-24T16:30:02 UTC" duration-ms="131" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyRiskMappingJourneyE2eFlow status=SUCCESS method=AIRiskManagementPageTest.verifyRiskMappingJourneyE2eFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.AIRiskManagementPageTest@2254127a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ai.holistic.tests.AIRiskManagementPageTest -->
+      <class name="com.ai.holistic.tests.GeneralInfoInvalidMessageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method,[Ljava.lang.Object;)[pri:0, instance:com.ai.holistic.tests.GeneralInfoInvalidMessageTest@51891008]" started-at="2025-04-24T16:29:32 UTC" name="setUp" finished-at="2025-04-24T16:29:54 UTC" duration-ms="22169" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.ai.holistic.tests.GeneralInfoInvalidMessageTest.validateGeneralInfoPageMissingDataErrorMessages(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@435fb7b5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateGeneralInfoPageMissingDataErrorMessages(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.GeneralInfoInvalidMessageTest@51891008]" started-at="2025-04-24T16:29:54 UTC" name="validateGeneralInfoPageMissingDataErrorMessages" data-provider="generalInfoInvalidTestData" finished-at="2025-04-24T16:29:56 UTC" duration-ms="1623" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Missing Email]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Organization A]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[APAC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateGeneralInfoPageMissingDataErrorMessages -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.ai.holistic.tests.GeneralInfoInvalidMessageTest@51891008]" started-at="2025-04-24T16:29:56 UTC" name="tearDown" finished-at="2025-04-24T16:29:56 UTC" duration-ms="437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateGeneralInfoPageMissingDataErrorMessages status=SUCCESS method=GeneralInfoInvalidMessageTest.validateGeneralInfoPageMissingDataErrorMessages(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ai.holistic.tests.GeneralInfoInvalidMessageTest@51891008] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ai.holistic.tests.GeneralInfoInvalidMessageTest -->
+      <class name="com.ai.holistic.tests.GeneralInfoDummyTests">
+        <test-method is-config="true" signature="initializeExtentReport()[pri:0, instance:com.ai.holistic.tests.GeneralInfoDummyTests@46d59067]" started-at="2025-04-24T16:29:32 UTC" name="initializeExtentReport" finished-at="2025-04-24T16:29:32 UTC" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeExtentReport -->
+        <test-method is-config="true" signature="flushExtentReport()[pri:0, instance:com.ai.holistic.tests.GeneralInfoDummyTests@46d59067]" started-at="2025-04-24T16:30:02 UTC" name="flushExtentReport" finished-at="2025-04-24T16:30:02 UTC" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushExtentReport -->
+      </class> <!-- com.ai.holistic.tests.GeneralInfoDummyTests -->
+    </test> <!-- AI RISK MANAGEMENT TESTS -->
+  </suite> <!-- AI_RISK_JOURNEY_E2E_TEST_SUITE -->
+</testng-results>

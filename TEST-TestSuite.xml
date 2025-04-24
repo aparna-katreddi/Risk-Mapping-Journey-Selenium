@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="31.445" tests="7" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="webdriver.chrome.driver" value="/home/runner/.cache/selenium/chromedriver/linux64/135.0.7049.114/chromedriver"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/runner/work/Risk-Mapping-Journey-Selenium/Risk-Mapping-Journey-Selenium/target/test-classes:/home/runner/work/Risk-Mapping-Journey-Selenium/Risk-Mapping-Journey-Selenium/target/classes:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-java/4.31.0/selenium-java-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-api/4.31.0/selenium-api-4.31.0.jar:/home/runner/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.31.0/selenium-chrome-driver-4.31.0.jar:/home/runner/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.31.0/selenium-chromium-driver-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-json/4.31.0/selenium-json-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.31.0/selenium-manager-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v133/4.31.0/selenium-devtools-v133-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v134/4.31.0/selenium-devtools-v134-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v135/4.31.0/selenium-devtools-v135-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.31.0/selenium-edge-driver-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.31.0/selenium-firefox-driver-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-http/4.31.0/selenium-http-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.31.0/selenium-ie-driver-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.31.0/selenium-remote-driver-4.31.0.jar:/home/runner/.m2/repository/com/google/guava/guava/33.4.6-jre/guava-33.4.6-jre.jar:/home/runner/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/home/runner/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/runner/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-api/1.48.0/opentelemetry-api-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-context/1.48.0/opentelemetry-context-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.48.0/opentelemetry-exporter-logging-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.48.0/opentelemetry-sdk-common-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.48.0/opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.48.0/opentelemetry-sdk-extension-autoconfigure-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.48.0/opentelemetry-sdk-trace-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.48.0/opentelemetry-sdk-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.48.0/opentelemetry-sdk-metrics-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.48.0/opentelemetry-sdk-logs-1.48.0.jar:/home/runner/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-os/4.31.0/selenium-os-4.31.0.jar:/home/runner/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.31.0/selenium-safari-driver-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-support/4.31.0/selenium-support-4.31.0.jar:/home/runner/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/home/runner/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/home/runner/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/runner/.m2/repository/io/rest-assured/rest-assured/5.5.1/rest-assured-5.5.1.jar:/home/runner/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/runner/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/runner/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/runner/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/runner/.m2/repository/io/rest-assured/json-path/5.5.1/json-path-5.5.1.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/home/runner/.m2/repository/io/rest-assured/rest-assured-common/5.5.1/rest-assured-common-5.5.1.jar:/home/runner/.m2/repository/io/rest-assured/xml-path/5.5.1/xml-path-5.5.1.jar:/home/runner/.m2/repository/io/github/bonigarcia/webdrivermanager/6.0.1/webdrivermanager-6.0.1.jar:/home/runner/.m2/repository/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar:/home/runner/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/home/runner/.m2/repository/com/github/docker-java/docker-java/3.5.0/docker-java-3.5.0.jar:/home/runner/.m2/repository/com/github/docker-java/docker-java-core/3.5.0/docker-java-core-3.5.0.jar:/home/runner/.m2/repository/com/github/docker-java/docker-java-api/3.5.0/docker-java-api-3.5.0.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.3/jackson-annotations-2.18.3.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.3/jackson-databind-2.18.3.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.3/jackson-core-2.18.3.jar:/home/runner/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/home/runner/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.5.0/docker-java-transport-httpclient5-3.5.0.jar:/home/runner/.m2/repository/com/github/docker-java/docker-java-transport/3.5.0/docker-java-transport-3.5.0.jar:/home/runner/.m2/repository/net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar:/home/runner/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/home/runner/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/home/runner/.m2/repository/org/apache/commons/commons-compress/1.27.1/commons-compress-1.27.1.jar:/home/runner/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.4.3/httpclient5-5.4.3.jar:/home/runner/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/home/runner/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar:/home/runner/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar:/home/runner/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/runner/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/runner/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/runner/.m2/repository/org/apache/poi/poi/5.4.1/poi-5.4.1.jar:/home/runner/.m2/repository/commons-codec/commons-codec/1.18.0/commons-codec-1.18.0.jar:/home/runner/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/home/runner/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/runner/.m2/repository/commons-io/commons-io/2.18.0/commons-io-2.18.0.jar:/home/runner/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/home/runner/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/runner/.m2/repository/org/apache/poi/poi-ooxml/5.4.1/poi-ooxml-5.4.1.jar:/home/runner/.m2/repository/org/apache/poi/poi-ooxml-lite/5.4.1/poi-ooxml-lite-5.4.1.jar:/home/runner/.m2/repository/org/apache/xmlbeans/xmlbeans/5.3.0/xmlbeans-5.3.0.jar:/home/runner/.m2/repository/com/github/virtuald/curvesapi/1.08/curvesapi-1.08.jar:/home/runner/.m2/repository/com/aventstack/extentreports/5.1.2/extentreports-5.1.2.jar:/home/runner/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/home/runner/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/runner/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="suiteName" value="AI_RISK_JOURNEY_E2E_TEST_SUITE"/>
+    <property name="sun.boot.library.path" value="/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/23.0.2-7/x64/lib"/>
+    <property name="sun.java.command" value="/home/runner/work/Risk-Mapping-Journey-Selenium/Risk-Mapping-Journey-Selenium/target/surefire/surefirebooter16261536875288598954.jar /home/runner/work/Risk-Mapping-Journey-Selenium/Risk-Mapping-Journey-Selenium/target/surefire 2025-04-24T16-29-30_903-jvmRun1 surefire13609601301494677962tmp surefire_013304442576555587981tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/runner/work/Risk-Mapping-Journey-Selenium/Risk-Mapping-Journey-Selenium/target/test-classes:/home/runner/work/Risk-Mapping-Journey-Selenium/Risk-Mapping-Journey-Selenium/target/classes:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-java/4.31.0/selenium-java-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-api/4.31.0/selenium-api-4.31.0.jar:/home/runner/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.31.0/selenium-chrome-driver-4.31.0.jar:/home/runner/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.31.0/selenium-chromium-driver-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-json/4.31.0/selenium-json-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.31.0/selenium-manager-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v133/4.31.0/selenium-devtools-v133-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v134/4.31.0/selenium-devtools-v134-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v135/4.31.0/selenium-devtools-v135-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.31.0/selenium-edge-driver-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.31.0/selenium-firefox-driver-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-http/4.31.0/selenium-http-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.31.0/selenium-ie-driver-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.31.0/selenium-remote-driver-4.31.0.jar:/home/runner/.m2/repository/com/google/guava/guava/33.4.6-jre/guava-33.4.6-jre.jar:/home/runner/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/home/runner/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/runner/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-api/1.48.0/opentelemetry-api-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-context/1.48.0/opentelemetry-context-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.48.0/opentelemetry-exporter-logging-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.48.0/opentelemetry-sdk-common-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.48.0/opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.48.0/opentelemetry-sdk-extension-autoconfigure-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.48.0/opentelemetry-sdk-trace-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.48.0/opentelemetry-sdk-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.48.0/opentelemetry-sdk-metrics-1.48.0.jar:/home/runner/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.48.0/opentelemetry-sdk-logs-1.48.0.jar:/home/runner/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-os/4.31.0/selenium-os-4.31.0.jar:/home/runner/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.31.0/selenium-safari-driver-4.31.0.jar:/home/runner/.m2/repository/org/seleniumhq/selenium/selenium-support/4.31.0/selenium-support-4.31.0.jar:/home/runner/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/home/runner/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/home/runner/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/runner/.m2/repository/io/rest-assured/rest-assured/5.5.1/rest-assured-5.5.1.jar:/home/runner/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/runner/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/runner/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/runner/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/runner/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/runner/.m2/repository/io/rest-assured/json-path/5.5.1/json-path-5.5.1.jar:/home/runner/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/home/runner/.m2/repository/io/rest-assured/rest-assured-common/5.5.1/rest-assured-common-5.5.1.jar:/home/runner/.m2/repository/io/rest-assured/xml-path/5.5.1/xml-path-5.5.1.jar:/home/runner/.m2/repository/io/github/bonigarcia/webdrivermanager/6.0.1/webdrivermanager-6.0.1.jar:/home/runner/.m2/repository/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar:/home/runner/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/home/runner/.m2/repository/com/github/docker-java/docker-java/3.5.0/docker-java-3.5.0.jar:/home/runner/.m2/repository/com/github/docker-java/docker-java-core/3.5.0/docker-java-core-3.5.0.jar:/home/runner/.m2/repository/com/github/docker-java/docker-java-api/3.5.0/docker-java-api-3.5.0.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.3/jackson-annotations-2.18.3.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.3/jackson-databind-2.18.3.jar:/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.3/jackson-core-2.18.3.jar:/home/runner/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/home/runner/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.5.0/docker-java-transport-httpclient5-3.5.0.jar:/home/runner/.m2/repository/com/github/docker-java/docker-java-transport/3.5.0/docker-java-transport-3.5.0.jar:/home/runner/.m2/repository/net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar:/home/runner/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/home/runner/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/home/runner/.m2/repository/org/apache/commons/commons-compress/1.27.1/commons-compress-1.27.1.jar:/home/runner/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.4.3/httpclient5-5.4.3.jar:/home/runner/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/home/runner/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar:/home/runner/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar:/home/runner/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/runner/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/runner/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/runner/.m2/repository/org/apache/poi/poi/5.4.1/poi-5.4.1.jar:/home/runner/.m2/repository/commons-codec/commons-codec/1.18.0/commons-codec-1.18.0.jar:/home/runner/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/home/runner/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/runner/.m2/repository/commons-io/commons-io/2.18.0/commons-io-2.18.0.jar:/home/runner/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/home/runner/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/runner/.m2/repository/org/apache/poi/poi-ooxml/5.4.1/poi-ooxml-5.4.1.jar:/home/runner/.m2/repository/org/apache/poi/poi-ooxml-lite/5.4.1/poi-ooxml-lite-5.4.1.jar:/home/runner/.m2/repository/org/apache/xmlbeans/xmlbeans/5.3.0/xmlbeans-5.3.0.jar:/home/runner/.m2/repository/com/github/virtuald/curvesapi/1.08/curvesapi-1.08.jar:/home/runner/.m2/repository/com/aventstack/extentreports/5.1.2/extentreports-5.1.2.jar:/home/runner/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/home/runner/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/runner/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/runner"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/23.0.2-7/x64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/runner/work/Risk-Mapping-Journey-Selenium/Risk-Mapping-Journey-Selenium"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="testng.suite" value="src/test/resources/testng-sequence.xml"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/runner/work/Risk-Mapping-Journey-Selenium/Risk-Mapping-Journey-Selenium/target/surefire/surefirebooter16261536875288598954.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.2+7"/>
+    <property name="user.name" value="runner"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.11.0-1012-azure"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="browser" value="chrome"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-23.0.2+7"/>
+    <property name="localRepository" value="/home/runner/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="user.dir" value="/home/runner/work/Risk-Mapping-Journey-Selenium/Risk-Mapping-Journey-Selenium"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="groups" value="regression"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="env" value="qa"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="23.0.2+7"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="validateGeneralInfoPageMissingDataErrorMessages[Missing Email, Organization A, , APAC](1)" classname="com.ai.holistic.tests.GeneralInfoInvalidMessageTest" time="1.62">
+    <system-out><![CDATA[16:29:32.240 [TestNG-test-AI RISK MANAGEMENT TESTS-2] INFO  com.ai.holistic.utils.ConfigReader - Loaded config file: src/test/resources/config.qa.properties
+2025-04-24T16:29:32.297556024Z TestNG-test-AI RISK MANAGEMENT TESTS-2 ERROR Log4j API could not find a logging provider.
+16:29:41.978 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 135.0.7049.114 (resolved driver for Chrome 135)
+16:29:41.981 [TestNG-test-AI RISK MANAGEMENT TESTS-2] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 135.0.7049.114 (resolved driver for Chrome 135)
+16:29:42.011 [TestNG-test-AI RISK MANAGEMENT TESTS-2] INFO  i.g.bonigarcia.wdm.online.Downloader - Downloading https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.114/linux64/chromedriver-linux64.zip
+16:29:42.012 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.online.Downloader - Downloading https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.114/linux64/chromedriver-linux64.zip
+16:29:42.299 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver-linux64.zip
+16:29:42.309 [TestNG-test-AI RISK MANAGEMENT TESTS-2] INFO  i.g.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver-linux64.zip
+16:29:42.447 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/runner/.cache/selenium/chromedriver/linux64/135.0.7049.114/chromedriver
+16:29:42.474 [TestNG-test-AI RISK MANAGEMENT TESTS-2] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/runner/.cache/selenium/chromedriver/linux64/135.0.7049.114/chromedriver
+16:29:54.890 [TestNG-test-AI RISK MANAGEMENT TESTS-2] INFO  c.a.h.t.GeneralInfoInvalidMessageTest - On GeneralInformationPage - Fill out Name , org, email , region & Submit 
+16:29:54.890 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On GeneralInformationPage - Fill  Name , org, email , region & Submit 
+16:29:54.909 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Navigate to URL:src/main/resources/securityForm.html
+16:29:54.909 [TestNG-test-AI RISK MANAGEMENT TESTS-2] INFO  c.a.h.pages.GeneralInformationPage - Navigate to URL:src/main/resources/securityForm.html
+16:29:55.858 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Deployment Name :RegionUS RiskHigh SensitiveYes
+16:29:56.161 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Org Name :Organization A
+16:29:56.224 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Email Address :user2@example.com
+16:29:56.284 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Select region :US
+16:29:56.406 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Click Next 
+16:29:56.472 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On AIRiskManagementPage - Fill  sensitive data , risk level,navigate to Data Security Page
+16:29:56.473 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.AIRiskManagementPage - Verify Title on AI Risk Management Page
+]]></system-out>
+  </testcase>
+  <testcase name="dummyVerifyTitleOnAIRiskMngmtPage[RegionUS RiskHigh SensitiveYes, Organization A, user2@example.com, US, No, High, Encryption, Yes, , Yes, Yes](1)" classname="com.ai.holistic.tests.AIRiskManagementPageTest" time="1.621"/>
+  <testcase name="dummyVerifyTitleOnAIRiskMngmtPage[RegionUS RiskHigh SensitiveYes, Organization A, user2@example.com, EU, No, High, Encryption, Yes, Yes, Yes, Yes](2)" classname="com.ai.holistic.tests.AIRiskManagementPageTest" time="0.413">
+    <system-out><![CDATA[16:29:57.066 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 135.0.7049.114 (resolved driver for Chrome 135)
+16:29:57.070 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/runner/.cache/selenium/chromedriver/linux64/135.0.7049.114/chromedriver
+16:29:57.365 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On GeneralInformationPage - Fill  Name , org, email , region & Submit 
+16:29:57.366 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Navigate to URL:src/main/resources/securityForm.html
+16:29:57.465 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Deployment Name :RegionUS RiskHigh SensitiveYes
+16:29:57.534 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Org Name :Organization A
+16:29:57.583 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Email Address :user2@example.com
+16:29:57.627 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Select region :EU
+16:29:57.708 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Click Next 
+16:29:57.757 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On AIRiskManagementPage - Fill  sensitive data , risk level,navigate to Data Security Page
+16:29:57.758 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.AIRiskManagementPage - Verify Title on AI Risk Management Page
+]]></system-out>
+  </testcase>
+  <testcase name="dummyVerifyTitleOnAIRiskMngmtPage[RegionUS RiskHigh SensitiveYes, Organization A, user2@example.com, APAC, No, High, Encryption, Yes, , Yes, No](3)" classname="com.ai.holistic.tests.AIRiskManagementPageTest" time="0.391">
+    <system-out><![CDATA[16:29:57.915 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 135.0.7049.114 (resolved driver for Chrome 135)
+16:29:57.917 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/runner/.cache/selenium/chromedriver/linux64/135.0.7049.114/chromedriver
+16:29:58.207 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On GeneralInformationPage - Fill  Name , org, email , region & Submit 
+16:29:58.208 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Navigate to URL:src/main/resources/securityForm.html
+16:29:58.302 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Deployment Name :RegionUS RiskHigh SensitiveYes
+16:29:58.365 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Org Name :Organization A
+16:29:58.410 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Email Address :user2@example.com
+16:29:58.452 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Select region :APAC
+16:29:58.530 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Click Next 
+16:29:58.579 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On AIRiskManagementPage - Fill  sensitive data , risk level,navigate to Data Security Page
+16:29:58.579 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.AIRiskManagementPage - Verify Title on AI Risk Management Page
+]]></system-out>
+  </testcase>
+  <testcase name="verifyRiskMappingJourneyE2eFlow[RegionUS RiskHigh SensitiveYes, Organization A, user2@example.com, US, No, High, Encryption, Yes, , Yes, Yes](1)" classname="com.ai.holistic.tests.AIRiskManagementPageTest" time="0.967">
+    <system-out><![CDATA[16:29:58.710 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 135.0.7049.114 (resolved driver for Chrome 135)
+16:29:58.714 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/runner/.cache/selenium/chromedriver/linux64/135.0.7049.114/chromedriver
+16:29:59.034 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On GeneralInformationPage - Fill out Name , org, email , region & Submit 
+16:29:59.034 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Navigate to URL:src/main/resources/securityForm.html
+16:29:59.104 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Deployment Name :RegionUS RiskHigh SensitiveYes
+16:29:59.167 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Org Name :Organization A
+16:29:59.213 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Email Address :user2@example.com
+16:29:59.256 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Select region :US
+16:29:59.338 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Click Next 
+16:29:59.387 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On AIRiskManagementPage - Fill out sensitive data , risk level,navigate to Data Security Page
+16:29:59.387 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.AIRiskManagementPage - Verify Title on AI Risk Management Page
+16:29:59.625 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On DataSecurityPage - Fill out security measures data, encryption implemented , data residency compliance, navigate to Compliance Measures 
+16:29:59.790 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On ComplianceMeasuresPage - Fill out compliance measures data, riskAssessment and audit submit form to view final summary 
+16:29:59.997 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  com.ai.holistic.pages.SummaryPage - AI Deployment Name: RegionUS RiskHigh SensitiveYes
+Organization Name: Organization A
+Email Address: user2@example.com
+Region: US
+Sensitive Data: No
+Risk Level: High
+Security Measures: Encryption
+Encryption: Yes
+Data Residency Compliance:
+Risk Assessment: Yes
+Compliance Audit: Yes
+16:30:00.001 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - data residency flga 
+]]></system-out>
+  </testcase>
+  <testcase name="verifyRiskMappingJourneyE2eFlow[RegionUS RiskHigh SensitiveYes, Organization A, user2@example.com, EU, No, High, Encryption, Yes, Yes, Yes, Yes](2)" classname="com.ai.holistic.tests.AIRiskManagementPageTest" time="0.989">
+    <system-out><![CDATA[16:30:00.136 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 135.0.7049.114 (resolved driver for Chrome 135)
+16:30:00.138 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/runner/.cache/selenium/chromedriver/linux64/135.0.7049.114/chromedriver
+16:30:00.434 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On GeneralInformationPage - Fill out Name , org, email , region & Submit 
+16:30:00.434 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Navigate to URL:src/main/resources/securityForm.html
+16:30:00.504 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Deployment Name :RegionUS RiskHigh SensitiveYes
+16:30:00.567 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Org Name :Organization A
+16:30:00.613 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Email Address :user2@example.com
+16:30:00.655 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Select region :EU
+16:30:00.733 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Click Next 
+16:30:00.784 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On AIRiskManagementPage - Fill out sensitive data , risk level,navigate to Data Security Page
+16:30:00.784 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.AIRiskManagementPage - Verify Title on AI Risk Management Page
+16:30:00.992 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On DataSecurityPage - Fill out security measures data, encryption implemented , data residency compliance, navigate to Compliance Measures 
+16:30:01.215 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On ComplianceMeasuresPage - Fill out compliance measures data, riskAssessment and audit submit form to view final summary 
+16:30:01.421 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  com.ai.holistic.pages.SummaryPage - AI Deployment Name: RegionUS RiskHigh SensitiveYes
+Organization Name: Organization A
+Email Address: user2@example.com
+Region: EU
+Sensitive Data: No
+Risk Level: High
+Security Measures: Encryption
+Encryption: Yes
+Data Residency Compliance: Yes
+Risk Assessment: Yes
+Compliance Audit: Yes
+16:30:01.421 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - data residency flga Yes
+]]></system-out>
+  </testcase>
+  <testcase name="verifyRiskMappingJourneyE2eFlow[RegionUS RiskHigh SensitiveYes, Organization A, user2@example.com, APAC, No, High, Encryption, Yes, , Yes, No](3)" classname="com.ai.holistic.tests.AIRiskManagementPageTest" time="0.944">
+    <system-out><![CDATA[16:30:01.561 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 135.0.7049.114 (resolved driver for Chrome 135)
+16:30:01.563 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/runner/.cache/selenium/chromedriver/linux64/135.0.7049.114/chromedriver
+16:30:01.863 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On GeneralInformationPage - Fill out Name , org, email , region & Submit 
+16:30:01.864 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Navigate to URL:src/main/resources/securityForm.html
+16:30:01.947 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Deployment Name :RegionUS RiskHigh SensitiveYes
+16:30:02.013 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Org Name :Organization A
+16:30:02.058 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Enter Email Address :user2@example.com
+16:30:02.102 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Select region :APAC
+16:30:02.181 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.GeneralInformationPage - Click Next 
+16:30:02.231 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On AIRiskManagementPage - Fill out sensitive data , risk level,navigate to Data Security Page
+16:30:02.231 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.pages.AIRiskManagementPage - Verify Title on AI Risk Management Page
+16:30:02.433 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On DataSecurityPage - Fill out security measures data, encryption implemented , data residency compliance, navigate to Compliance Measures 
+16:30:02.593 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - On ComplianceMeasuresPage - Fill out compliance measures data, riskAssessment and audit submit form to view final summary 
+16:30:02.807 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  com.ai.holistic.pages.SummaryPage - AI Deployment Name: RegionUS RiskHigh SensitiveYes
+Organization Name: Organization A
+Email Address: user2@example.com
+Region: APAC
+Sensitive Data: No
+Risk Level: High
+Security Measures: Encryption
+Encryption: Yes
+Data Residency Compliance:
+Risk Assessment: Yes
+Compliance Audit: No
+16:30:02.807 [TestNG-test-AI RISK MANAGEMENT TESTS-1] INFO  c.a.h.tests.AIRiskManagementPageTest - data residency flga 
+]]></system-out>
+  </testcase>
+</testsuite>
