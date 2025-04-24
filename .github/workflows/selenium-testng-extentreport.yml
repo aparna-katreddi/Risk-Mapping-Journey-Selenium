@@ -55,7 +55,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '23'
-          distribution: 'adoptopenjdk'
+          distribution: 'temurin'
 
       # Step 3: Cache Maven dependencies
       - name: Cache Maven dependencies
