@@ -117,5 +117,11 @@ public class ExtentReportManager {
     public static boolean isReportNotInitialized() {
         return extent == null;
     }
+
+    public static void flushReport() {
+        if (extent != null) {
+            extent.flush();
+        }
+    }
 }
 

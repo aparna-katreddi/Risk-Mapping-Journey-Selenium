@@ -13,16 +13,23 @@ import java.lang.reflect.Method;
 public class BaseTest {
     protected WebDriver driver;
 
+    @BeforeSuite(alwaysRun = true)
+    public void initializeExtentReport() {
+        ExtentReportManager.startTest();  // safe to do once here
+        }
+
     @BeforeMethod(alwaysRun = true)
     @Parameters({"browser"})
     public void setUp(@Optional("chrome") String browser, Method method, Object[] testData) {
         WebDriverFactory.initDriver(browser);
         driver = WebDriverFactory.getDriver();
-
+/* 
 // Ensure startTest is called first (initializes the ExtentReports object)
         if (ExtentReportManager.isReportNotInitialized()) {
             ExtentReportManager.startTest(); // Initialize ExtentReports only once if not already initialized
         }
+        */
+        
         // Capture class name and method name
         String className = this.getClass().getSimpleName();
         String testName =  method.getName();
@@ -63,6 +70,11 @@ public class BaseTest {
             return result.getMethod().getMethodName() + " [" + paramStr + "]";
         }
         return null;
+    }
+
+    @AfterSuite(alwaysRun = true)
+        public void flushExtentReport() {
+           ExtentReportManager.flushReport();
     }
 
 
