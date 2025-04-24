@@ -7,35 +7,38 @@ on:
       browser:
         description: 'Select the browser'
         required: true
-        default: 'chrome'
+        type: choice
         options:
           - 'chrome'
           - 'firefox'
+        default: 'chrome'
 
       env:
         description: 'Select the environment'
         required: true
-        default: 'qa'
+        type: choice
         options:
           - 'qa'
           - 'stage'
           - 'prod'
+        default: 'qa'
 
       groups:
         description: 'Select the test group'
         required: true
-        default: 'regression'
+        type: choice
         options:
           - 'smoke'
           - 'regression'
-
+        default: 'regression'
       suite:
         description: 'Select the TestNG suite'
         required: true
-        default: 'testng-sequence.xml'
+        type: choice
         options:
           - 'testng-sequence.xml'
           - 'testng.xml'
+        default: 'testng-sequence.xml'
 
 
 jobs:
@@ -73,7 +76,7 @@ jobs:
 
       # Step 6: Upload Test Results (optional)
       - name: Upload Test Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: target/surefire-reports/
