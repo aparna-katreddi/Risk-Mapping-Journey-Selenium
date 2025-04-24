@@ -98,7 +98,7 @@ jobs:
         if: success()
         run: |
           # Move your Extent report (or generated HTML files) to the gh-pages directory
-          mv ./target/extent-reports ./gh-pages/
+          mv ./reports ./gh-pages/
           
           # Create an empty commit if no changes have been made
           git add .
