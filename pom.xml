@@ -13,7 +13,7 @@
         <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <group>regression</group>
-        <testng.suite>src/test/resources/testng-default.xml</testng.suite>
+        <testng.suite>src/test/resources/testng.xml</testng.suite>
     </properties>
  <dependencies>
     <!-- Selenium -->

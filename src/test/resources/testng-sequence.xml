@@ -6,14 +6,6 @@
     </listeners>
     <parameter name="browser" value="firefox"/>
 <test name="AI RISK MANAGEMENT TESTS">
-<!--
-<groups>
-    <run>
-        <include name="regression"/>
-    </run>
-</groups>
--->
-
     <classes>
         <class name="com.ai.holistic.tests.GeneralInfoDummyTests"/>
         <class name="com.ai.holistic.tests.AIRiskManagementPageTest"/>
