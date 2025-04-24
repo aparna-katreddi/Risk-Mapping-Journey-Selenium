@@ -3,10 +3,12 @@ package com.ai.holistic.base;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
+import java.util.UUID;
 
 @Slf4j
 public class WebDriverFactory {
@@ -28,7 +30,8 @@ public class WebDriverFactory {
             case "chrome":
             default:
                 WebDriverManager.chromedriver().setup();
-                webDriver = new ChromeDriver();
+                //webDriver = new ChromeDriver();
+                webDriver = createChromeDriver();
                 break;
         }
 
@@ -58,4 +61,25 @@ public class WebDriverFactory {
             }
         }
     }
+
+    public static WebDriver createChromeDriver() {
+        ChromeOptions options = new ChromeOptions();
+        // Create a temp dir for user-data-dir
+        String userDataDir = System.getProperty("java.io.tmpdir") + "/chrome-profile-" + UUID.randomUUID();
+        options.addArguments("--user-data-dir=" + userDataDir);
+        boolean isCI = System.getenv("CI") != null;
+        if (isCI) {
+            // Headless mode for CI
+            options.addArguments("--headless=new"); // For Chrome 109+
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-gpu"); // Extra safe
+        } else {
+            // Headed mode for local runs — optional tweaks
+            options.addArguments("--start-maximized"); // Optional: Maximize window
+            log.info("Running in local mode with full Chrome UI");
+        }
+        return new ChromeDriver(options);
+    }
+
 }
