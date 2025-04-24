@@ -10,36 +10,27 @@ on:
         description: 'Select the browser'
         required: true
         type: choice
-        options:
-          - 'chrome'
-          - 'firefox'
+        options: ['chrome', 'firefox']
         default: 'chrome'
 
       env:
         description: 'Select the environment'
         required: true
         type: choice
-        options:
-          - 'qa'
-          - 'stage'
-          - 'prod'
+        options: ['qa', 'uat', 'prod']
         default: 'qa'
 
       groups:
         description: 'Select the test group'
         required: true
         type: choice
-        options:
-          - 'smoke'
-          - 'regression'
+        options: ['smoke', 'regression']
         default: 'regression'
       suite:
         description: 'Select the TestNG suite'
         required: true
         type: choice
-        options:
-          - 'testng-sequence.xml'
-          - 'testng.xml'
+        options: ['testng-sequence.xml', 'testng.xml']
         default: 'testng-sequence.xml'
 
 
@@ -79,7 +70,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-results
-          path: /reports/
+          path: ./reports/
 
       # Step 7: upload to GitHub Pages 
       - name: Upload all reports to gh-pages and update index
@@ -87,14 +78,11 @@ jobs:
         run: |
               git fetch
               git switch gh-pages || git checkout --orphan gh-pages
-          
               mkdir -p reports
           
               # Keep all old reports
-              cp -r reports/ temp-reports || true
+              cp -r ../reports/*.html reports/ || echo "No reports to copy"
           
-              # Copy new reports
-              cp /reports/*.html reports/
           
               # Generate index.html with all reports
               INDEX_FILE="reports/index.html"
