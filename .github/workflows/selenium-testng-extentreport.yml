@@ -1,4 +1,6 @@
 name: Selenium Tests
+permissions:
+  contents: write
 
 on:
   # Trigger workflow manually via GitHub UI
