@@ -88,10 +88,12 @@ jobs:
             git config --global user.email "${{ github.actor }}@users.noreply.github.com"
             git config --global user.name "${{ github.actor }}"
 
-      - name: Check if gh-pages branch exists and create it if not
+      - name: Create or switch to gh-pages branch
         run: |
-              git fetch origin gh-pages || git checkout --orphan gh-pages
-              git reset --hard        
+              git fetch
+              git checkout gh-pages || git checkout --orphan gh-pages
+              git reset --hard
+              git rm -rf . || true       
 
       # Step 7: Deploy to GitHub Pages (publish to gh-pages branch)
       - name: Deploy to GitHub Pages
