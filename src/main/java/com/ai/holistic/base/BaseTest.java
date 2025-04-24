@@ -2,21 +2,22 @@ package com.ai.holistic.base;
 
 import com.ai.holistic.utils.ExtentReportManager;
 import com.aventstack.extentreports.Status;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
 
+@Slf4j
 public class BaseTest {
     protected WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     @Parameters({"browser"})
     public void setUp(@Optional("chrome") String browser, Method method, Object[] testData) {
         WebDriverFactory.initDriver(browser);
         driver = WebDriverFactory.getDriver();
-
 
 // Ensure startTest is called first (initializes the ExtentReports object)
         if (ExtentReportManager.isReportNotInitialized()) {
@@ -25,7 +26,6 @@ public class BaseTest {
         // Capture class name and method name
         String className = this.getClass().getSimpleName();
         String testName =  method.getName();
-
         // Capture the parameters from the data provider if available
         if (testData != null && testData.length > 0) {
             StringBuilder params = new StringBuilder();
@@ -35,7 +35,6 @@ public class BaseTest {
             // Remove the trailing comma
             testName += " [" + params.substring(0, params.length() - 2) + "]";
         }
-
         // Create the test in ExtentReport with the formatted name
         ExtentReportManager.createTest(testName);
         // Assign the class name as a category (Group by class name)
@@ -43,7 +42,7 @@ public class BaseTest {
     }
 
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown(ITestResult result) {
         // Capture the test name with parameters
         String parameterizedTestName = getParameterizedTestName(result);

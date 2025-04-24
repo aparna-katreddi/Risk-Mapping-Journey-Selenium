@@ -1,5 +1,6 @@
 package com.ai.holistic.base;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -7,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
 
+@Slf4j
 public class WebDriverFactory {
     // Thread-safe driver
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -31,7 +33,7 @@ public class WebDriverFactory {
         }
 
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        webDriver.manage().window().maximize();
+       // webDriver.manage().window().maximize();
 
         // Set the driver for the current thread
         driver.set(webDriver);
@@ -44,9 +46,16 @@ public class WebDriverFactory {
 
     // Quit and clean up
     public static void quitDriver() {
-        if (driver.get() != null) {
-            driver.get().quit();
-            driver.remove();
+        WebDriver currentDriver = driver.get();
+        if (currentDriver != null) {
+            try {
+                currentDriver.close();
+                currentDriver.quit(); // Attempt to quit the WebDriver session
+            } catch (Exception e) {
+                log.error("Error quitting WebDriver: {}", e.getMessage());
+            } finally {
+                driver.remove(); // Remove the thread-local reference
+            }
         }
     }
 }

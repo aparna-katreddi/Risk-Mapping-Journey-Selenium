@@ -12,6 +12,8 @@
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <group>regression</group>
+        <testng.suite>src/test/resources/testng-default.xml</testng.suite>
     </properties>
  <dependencies>
     <!-- Selenium -->
@@ -107,17 +109,15 @@
         </annotationProcessorPaths>
       </configuration>
     </plugin>
-    
+
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
         <configuration>
             <suiteXmlFiles>
-                <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                <suiteXmlFile>${testng.suite}</suiteXmlFile>
             </suiteXmlFiles>
-            <parallel>tests</parallel>
-            <threadCount>4</threadCount>
         </configuration>
     </plugin>
 </plugins>
