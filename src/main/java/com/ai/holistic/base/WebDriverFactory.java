@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
 import java.util.UUID;
@@ -21,7 +23,7 @@ public class WebDriverFactory {
         switch (browser.toLowerCase()) {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
-                webDriver = new FirefoxDriver();
+                webDriver = createFirefoxDriver();
                 break;
             case "edge":
                 WebDriverManager.edgedriver().setup();
@@ -80,6 +82,21 @@ public class WebDriverFactory {
             log.info("Running in local mode with full Chrome UI");
         }
         return new ChromeDriver(options);
+    }
+
+        public static WebDriver createFirefoxDriver() {
+        FirefoxOptions options = new FirefoxOptions();
+
+        if (Boolean.parseBoolean(System.getenv("CI"))) {
+            options.addArguments("-headless");
+        }
+
+        // Optional: Customize profile if needed
+        // FirefoxProfile profile = new FirefoxProfile();
+        // profile.setPreference("some.preference", true);
+        // options.setProfile(profile);
+
+        return new FirefoxDriver(options);
     }
 
 }
