@@ -1,7 +1,6 @@
 package com.ai.holistic.tests;
 
 import com.ai.holistic.base.BaseTest;
-import com.ai.holistic.base.WebDriverFactory;
 import com.ai.holistic.pages.*;
 import com.ai.holistic.utils.ConfigReader;
 import com.ai.holistic.utils.ExcelUtil;
