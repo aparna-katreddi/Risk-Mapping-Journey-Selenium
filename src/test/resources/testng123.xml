@@ -1,0 +1,11 @@
+<suite name="SequentialSuite" parallel="classes" thread-count="4">
+    <parameter name="browser" value="chrome"/>
+    <test name="ChromeTests">
+        <classes>
+            <class name="com.ai.holistic.tests.GeneralInfoDummyTests"/>
+            <class name="com.ai.holistic.tests.AIRiskManagementPageTest"/>
+            <class name="com.ai.holistic.tests.GeneralInfoInvalidMessageTest"/>
+            <class name="com.ai.holistic.tests.AIRiskManagementPageDummyTest"/>
+        </classes>
+    </test>
+</suite>

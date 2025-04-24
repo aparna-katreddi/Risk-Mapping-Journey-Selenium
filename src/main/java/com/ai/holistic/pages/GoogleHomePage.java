@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 @Slf4j
 public class GoogleHomePage {
-    WebDriver driver;
+    private WebDriver driver;
 
     @FindBy(name = "q")
     WebElement searchBox;

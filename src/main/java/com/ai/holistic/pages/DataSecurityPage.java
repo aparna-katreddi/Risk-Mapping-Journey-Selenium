@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 @Slf4j
 public class DataSecurityPage {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @FindBy(id = "securityMeasures")
     WebElement SECURITY_MEASURES_SELECTOR;

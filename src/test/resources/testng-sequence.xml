@@ -1,16 +1,19 @@
-<!-- <suite name="SequentialSuite" parallel="false">
-    <test name="ChromeTestSequential">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="com.ai.holistic.tests.GoogleSearchTest"/>
-        </classes>
-    </test>
-</suite>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >
+<suite name="AI_RISK_JOURNEY_E2E_TEST_SUITE" parallel="classes" thread-count="4">
+    <listeners>
+        <listener class-name="com.ai.holistic.listeners.SuiteListener"/>
+        <listener class-name="com.ai.holistic.listeners.FilterGroupsListener"/>
+    </listeners>
+    <parameter name="browser" value="firefox"/>
+<test name="AI RISK MANAGEMENT TESTS">
+<!--
+<groups>
+    <run>
+        <include name="regression"/>
+    </run>
+</groups>
 -->
 
-<suite name="SequentialSuite" parallel="true">
-<test name="ChromeTestSequential">
-    <parameter name="browser" value="chrome"/>
     <classes>
         <class name="com.ai.holistic.tests.GeneralInfoDummyTests"/>
         <class name="com.ai.holistic.tests.AIRiskManagementPageTest"/>

@@ -23,8 +23,9 @@ public class ExtentReportManager {
     // Create report instance (called once)
     public static void startTest() {
         if (extent == null) {
+            String suiteName = System.getProperty("suiteName", "DefaultSuite");
             String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-            String reportPath = System.getProperty("user.dir") + "/reports/TestReport_" + timestamp + ".html";
+            String reportPath = System.getProperty("user.dir") + "/reports/TestReport_"+ suiteName +"_" + timestamp + ".html";
 
             ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
             spark.config().setReportName("Automation Test Results");

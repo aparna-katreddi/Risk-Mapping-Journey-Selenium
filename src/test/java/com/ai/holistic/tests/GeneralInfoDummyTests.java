@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 @Slf4j
 public class GeneralInfoDummyTests extends BaseTest {
 
-    @Test(dataProvider ="generalInfoInvalidTestData",retryAnalyzer = RetryAnalyzer.class)
+    @Test(groups = {"smoke"},dataProvider ="generalInfoInvalidTestData",retryAnalyzer = RetryAnalyzer.class)
     public void dummyValidateGeneralInfoPageMissingDataErrorMessages(String name,String org,String email,String region) {
         log.info("On GeneralInformationPage - Fill out Name , org, email , region & Submit ");
         String actualWarningMessage = new GeneralInformationPage(driver).fillGeneralInfoWithMissingData(name,org,email,region)

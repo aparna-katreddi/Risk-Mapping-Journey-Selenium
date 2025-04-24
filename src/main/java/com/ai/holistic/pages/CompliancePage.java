@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CompliancePage {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @FindBy(id = "riskAssessment")
     WebElement RISK_ASSESSMENT_SELECTOR;

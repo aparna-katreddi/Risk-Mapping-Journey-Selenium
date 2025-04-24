@@ -1,6 +1,7 @@
 package com.ai.holistic.tests;
 
 import com.ai.holistic.base.BaseTest;
+import com.ai.holistic.base.WebDriverFactory;
 import com.ai.holistic.pages.GoogleHomePage;
 import com.ai.holistic.utils.ConfigReader;
 import com.ai.holistic.utils.ExcelUtil;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 @Slf4j
 public class GoogleSearchTest extends BaseTest {
 
-    @Test(dataProvider = "getSearchData", retryAnalyzer = RetryAnalyzer.class)
+    @Test(groups = {"regression"},dataProvider = "getSearchData", retryAnalyzer = RetryAnalyzer.class)
     public void googleSearchTest(String keyword) {
         GoogleHomePage homePage = new GoogleHomePage(driver);
         log.info("Google Home Page - Type Keyword {}",keyword);

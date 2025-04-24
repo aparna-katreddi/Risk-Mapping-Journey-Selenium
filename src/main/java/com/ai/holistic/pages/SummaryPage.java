@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 @Slf4j
 public class SummaryPage {
 
-        WebDriver driver;
+    private WebDriver driver;
 
         @FindBy(id = "summaryContent")
         WebElement SUMMARY_CONTENT;

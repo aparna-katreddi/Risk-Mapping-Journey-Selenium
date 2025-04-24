@@ -1,6 +1,7 @@
 package com.ai.holistic.tests;
 
 import com.ai.holistic.base.BaseTest;
+import com.ai.holistic.base.WebDriverFactory;
 import com.ai.holistic.pages.*;
 import com.ai.holistic.utils.ConfigReader;
 import com.ai.holistic.utils.ExcelUtil;
@@ -15,7 +16,7 @@ import org.testng.annotations.Test;
     @Slf4j
     public class AIRiskManagementPageTest extends BaseTest {
 
-        @Test(dataProvider ="getAllRegionValidData",retryAnalyzer = RetryAnalyzer.class)
+        @Test(groups = {"regression"},dataProvider ="getAllRegionValidData",retryAnalyzer = RetryAnalyzer.class)
         public void verifyRiskMappingJourneyE2eFlow(String name, String org, String email, String region,String sensitiveData,String riskLevel,String securityMeasures,String encryption,String dataResidencyCompliance,String riskAssessment,String audit) {
             log.info("On GeneralInformationPage - Fill out Name , org, email , region & Submit ");
             AIRiskManagementPage aiRiskManagementPage = new GeneralInformationPage(driver)
@@ -57,6 +58,17 @@ import org.testng.annotations.Test;
             Assert.assertTrue(summaryContent.contains("Compliance Audit: "+audit),"compliance audit mismatch"+audit);
         }
 
+       
+        @Test(groups = {"regression"},dataProvider ="getAllRegionValidData",retryAnalyzer = RetryAnalyzer.class)
+        public void dummyVerifyTitleOnAIRiskMngmtPage(String name, String org, String email, String region,String sensitiveData,String riskLevel,String securityMeasures,String encryption,String dataResidencyCompliance,String riskAssessment,String audit) {
+            log.info("On GeneralInformationPage - Fill  Name , org, email , region & Submit ");
+            AIRiskManagementPage aiRiskManagementPage = new GeneralInformationPage(driver)
+                    .fillGeneralInformation(name,org,email,region)
+                    .submitGeneralInformation();
+            log.info("On AIRiskManagementPage - Fill  sensitive data , risk level,navigate to Data Security Page");
+            Assert.assertEquals(aiRiskManagementPage.verifyTitleOnAIRiskManagementPage(),"AI Risk Management");
+        }
+       
         //@DataProvider(parallel = true)
         @DataProvider
         public Object[][] getAllRegionValidData() {

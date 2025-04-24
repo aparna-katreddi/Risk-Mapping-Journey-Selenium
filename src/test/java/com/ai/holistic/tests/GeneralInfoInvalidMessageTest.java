@@ -1,6 +1,7 @@
 package com.ai.holistic.tests;
 
 import com.ai.holistic.base.BaseTest;
+import com.ai.holistic.base.WebDriverFactory;
 import com.ai.holistic.pages.GeneralInformationPage;
 import com.ai.holistic.utils.ConfigReader;
 import com.ai.holistic.utils.ExcelUtil;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 @Slf4j
 public class GeneralInfoInvalidMessageTest extends BaseTest {
 
-    @Test(dataProvider ="generalInfoInvalidTestData",retryAnalyzer = RetryAnalyzer.class)
+    @Test(groups = {"regression"},dataProvider ="generalInfoInvalidTestData",retryAnalyzer = RetryAnalyzer.class)
     public void validateGeneralInfoPageMissingDataErrorMessages(String name,String org,String email,String region) {
         log.info("On GeneralInformationPage - Fill out Name , org, email , region & Submit ");
         String actualWarningMessage = new GeneralInformationPage(driver).fillGeneralInfoWithMissingData(name,org,email,region)

@@ -10,14 +10,10 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
-
-
-
 @Slf4j
 public class AIRiskManagementPageDummyTest extends BaseTest {
 
-    @Test(dataProvider ="getAllRegionValidData",retryAnalyzer = RetryAnalyzer.class)
+    @Test(groups = {"smoke", "e2e"},dataProvider ="getAllRegionValidData",retryAnalyzer = RetryAnalyzer.class)
     public void dummyVerifyRiskMappingJourneyE2eFlow(String name, String org, String email, String region,String sensitiveData,String riskLevel,String securityMeasures,String encryption,String dataResidencyCompliance,String riskAssessment,String audit) {
         log.info("On GeneralInformationPage - Fill out Name , org, email , region & Submit ");
         AIRiskManagementPage aiRiskManagementPage = new GeneralInformationPage(driver)
@@ -57,6 +53,19 @@ public class AIRiskManagementPageDummyTest extends BaseTest {
         Assert.assertTrue(summaryContent.contains(expectedDataResidencyCompliance),"data residency mismatch"+dataResidencyCompliance);
         Assert.assertTrue(summaryContent.contains("Risk Assessment: "+riskAssessment),"risk assessment mismatch"+riskAssessment);
         Assert.assertFalse(summaryContent.contains("Compliance Audit: "+audit),"compliance audit mismatch"+audit);
+    }
+
+
+  
+
+    @Test(groups = {"smoke"},dataProvider ="getAllRegionValidData",retryAnalyzer = RetryAnalyzer.class)
+    public void dummyVerifyTitleOnAIRiskMngmtPage(String name, String org, String email, String region,String sensitiveData,String riskLevel,String securityMeasures,String encryption,String dataResidencyCompliance,String riskAssessment,String audit) {
+        log.info("On GeneralInformationPage - Fill  Name , org, email , region & Submit ");
+        AIRiskManagementPage aiRiskManagementPage = new GeneralInformationPage(driver)
+                .fillGeneralInformation(name,org,email,region)
+                .submitGeneralInformation();
+        log.info("On AIRiskManagementPage - Fill  sensitive data , risk level,navigate to Data Security Page");
+        Assert.assertEquals(aiRiskManagementPage.verifyTitleOnAIRiskManagementPage(),"AI Risk Management");
     }
 
     //@DataProvider(parallel = true)

@@ -14,7 +14,7 @@ import java.net.MalformedURLException;
 @Slf4j
 public class GeneralInformationPage {
 
-    WebDriver driver;
+    private WebDriver driver;
 
 
     @FindBy(id = "deploymentName")

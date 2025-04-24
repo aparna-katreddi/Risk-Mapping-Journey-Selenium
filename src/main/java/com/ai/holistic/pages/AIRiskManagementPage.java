@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 @Slf4j
 public class AIRiskManagementPage {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @FindBy(xpath = "//div[@id=\"ai-risk\"]/h2")
     WebElement AI_RISK_SECTION_SELECTOR;
